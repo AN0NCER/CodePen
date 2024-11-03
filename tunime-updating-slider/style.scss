@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #191C21;
+    font-family: Manrope;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.uSwiperWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 13px;
+    overflow: hidden;
+}
+
+.sWrapper {
+    position: relative;
+    .swiper-wrapper {
+        .vWrapper {
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            position: relative;
+
+            video {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .controls {
+                position: absolute;
+                bottom: 5px;
+                left: 5px;
+                right: 5px;
+                height: 35px;
+                padding-left: 5px;
+                padding-right: 5px;
+                background: #1f293b;
+                display: flex;
+                align-items: center;
+                border-radius: 3px;
+                justify-content: space-between;
+
+                .icon {
+                    display: flex;
+                    color: #fff;
+                    font-size: 12px;
+                    align-items: center;
+                    gap: 5px;
+                    font-weight: bold;
+
+                    img {
+                        width: 22px;
+                        border-radius: 3px;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    gap: 3px;
+
+                    .btn-play-pause{
+                        &.pause{
+                            svg.play{
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    .btn-play-pause,
+                    a {
+                        width: 25px;
+                        height: 25px;
+                        background: #0f141d;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        display: grid;
+                        place-items: center;
+                        position: relative;
+                        svg{
+                            width: 10px;
+                            fill: #b2b3b6;
+                            position: absolute;
+                        }
+                    }
+
+                    a {
+                        svg {
+                            width: 12px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -13px !important;
+
+}
+
+.swiper-pagination-bullet-active {
+    background: #3689E8 !important;
+}
